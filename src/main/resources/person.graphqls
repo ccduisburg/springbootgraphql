@@ -1,0 +1,32 @@
+
+type Person {
+    id: ID!
+    vorname: String!
+    nachname: String!
+    skill: String
+    geburtsdatum:String
+
+}
+input InputPerson{
+    vorname: String!
+    nachname: String!
+    skill: String
+    geburtsdatum:String
+}
+
+# The Root Query for the application
+type Query {
+    findAllPerson:[Person]!
+
+}
+
+# The Root Mutation for the application
+type Mutation {
+    savePerson(vorname:String,nachname:String, skill:String, geburtsdatum:String):Person!
+    deletePerson(pr:InputPerson):Boolean!
+    updatePerson(pr:InputPerson):Person!
+}
+schema {
+    query: Query
+    mutation: Mutation
+}
