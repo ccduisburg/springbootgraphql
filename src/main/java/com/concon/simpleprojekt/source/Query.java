@@ -12,11 +12,14 @@ public class Query implements GraphQLQueryResolver {
 
   private  PersonRepository personRepository;
 
-    public Query(JpaRepository<Person, Integer> personRepository) {
-    }
+  public Query(PersonRepository personRepository) {
+    this.personRepository = personRepository;
+
+  }
 
 
-    public List<Person> findAllPerson() {
+
+  public List<Person> findAllPerson() {
         return personRepository.findAll();
     }
 

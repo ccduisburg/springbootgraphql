@@ -1,7 +1,0 @@
-{
-  "configuration" : {
-    "message": "This message will not be displayed",
-
-    "applicationjson" : "But this message is from the application.json file"
-  }
-}

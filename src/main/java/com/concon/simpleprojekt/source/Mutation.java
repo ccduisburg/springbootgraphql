@@ -10,10 +10,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.sql.Date;
 
 public class Mutation implements GraphQLMutationResolver {
-    
     private PersonRepository personRepository;
-
-    public Mutation(JpaRepository<Person, Integer> personRepository) {
+    public Mutation(PersonRepository personRepository) {
+        this.personRepository=personRepository;
     }
 
 

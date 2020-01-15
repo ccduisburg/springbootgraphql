@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class PersonResolver implements GraphQLResolver<Person> {
 
-    PersonRepository personRepository;
+private  PersonRepository personRepository;
     public PersonResolver(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
 
-    public Person getPerson(Person person) {
-        return personRepository.getOne(person.getId());
-    }
+   // public Person getPerson(Person person) {
+//        return personRepository.getOne(person.getId());
+//    }
 }
