@@ -26,15 +26,15 @@ public class SimpleprojektApplication {
 	//	Config config = ConfigFactory.load();
 		SpringApplication.run(SimpleprojektApplication.class, args);
 	}
-	@Bean
-	public PersonResolver authorResolver(PersonRepository authorRepository) {
-		return new PersonResolver(authorRepository);
-	}
+//	@Bean
+//	public PersonResolver authorResolver(PersonRepository authorRepository) {
+//		return new PersonResolver(authorRepository);
+//	}
 
-	@Bean
-	public Query query(PersonRepository personRepository) {
-		return new Query(personRepository);
-	}
+//	@Bean
+//	public Query query(PersonRepository personRepository) {
+//		return new Query();
+//	}
 
 	@Bean
 	public Mutation mutation(PersonRepository personRepository) {
@@ -66,16 +66,16 @@ public class SimpleprojektApplication {
 		};
 	}
 
-	@Bean
-	public CommandLineRunner demo(PersonRepository personRepository) {
-		return (args) -> {
-			Person person = new Person();
-			person.setVorname("cc");
-			person.setNachname("jkkdk");
-			person.setSkill("hic bisey");
-			personRepository.save(person);
-
-
-		};
-	}
+//	@Bean
+//	public CommandLineRunner demo(PersonRepository personRepository) {
+//		return (args) -> {
+//			Person person = new Person();
+//			person.setVorname("cc");
+//			person.setNachname("jkkdk");
+//			person.setSkill("hic bisey");
+//			personRepository.save(person);
+//
+//
+//		};
+//	}
 }

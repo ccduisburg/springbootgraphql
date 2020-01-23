@@ -31,9 +31,6 @@ public class PersonController {
     @Autowired
     PersonRepository personRepository;
 
-
-
-   
     @RequestMapping(
              method= RequestMethod.GET,
              path="/allperson",
